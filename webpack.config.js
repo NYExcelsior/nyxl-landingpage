@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var path = require('path');
 module.exports = {
     entry: {
         'main': './src/js/index.js',
@@ -68,11 +69,6 @@ module.exports = {
         new UglifyJSPlugin({
             // // include: /\.min\.js$/,
             minimize: true
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
         })
     ]
 };

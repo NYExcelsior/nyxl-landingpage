@@ -70,11 +70,6 @@ module.exports = {
             template: path.join(__dirname, './src/index.html'),
             filename: 'index.html',
             inject: 'body'
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('development')
-            }
         })
     ],
     devtool: 'eval'
