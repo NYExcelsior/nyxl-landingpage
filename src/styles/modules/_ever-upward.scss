@@ -4,14 +4,16 @@
     position: relative;
     &__top-text {
         color: $colorWhite;
-        font-size: rem-calc(50);
+        // font-size: rem-calc(50);
+        font-size: 4vw;
         padding-top: rem-calc(150);
         position: relative;
         text-align: center;
         z-index: 1;
     }
     &__main-text {
-        font-size: rem-calc(130);
+        // font-size: rem-calc(130);
+        font-size: 12vw;
         margin: auto;
         padding: rem-calc(100 0 100 0);
         position: relative;

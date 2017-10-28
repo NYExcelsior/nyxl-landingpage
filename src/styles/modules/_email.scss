@@ -1,7 +1,7 @@
 @mixin placeholder() {
     color: $colorDarkBlue;
-    font-size: 8vw;
-    font-weight: bold;
+    font-family: 'HelveticaLTStd-ExtraComp';
+    font-size: 5vw;
     opacity: 1;
 }
 
@@ -13,16 +13,24 @@
         $colorDarkBlue rem-calc(80),
         $colorDarkBlue rem-calc(160)
     );
+    padding-bottom: 15vw;
     &__title {
         @extend %section-title; 
     }
+    &__form {
+        text-align: center;
+    }
     &__form-field {
+        display: inline-block;
+        width: percentage(15/25);
         input {
             background: $colorWhite;
             border: none;
             color: $colorDarkBlue;
-            font-size: 8vw;
-            padding: rem-calc(18 18 15);
+            font-family: 'HelveticaLTStd-ExtraComp';
+            font-size: 5vw;
+            height: 7vw;
+            padding: rem-calc(0 5 0 5);
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 @include placeholder();
@@ -41,7 +49,18 @@
             }
         }
     }
-    &__form-button {
-
+    &__form-submit {
+        display: inline-block;
+        width: percentage(5/25);
+        input {
+            background-color: $colorDarkBlue;
+            border: none;
+            color: $colorWhite;
+            font-family: 'HelveticaLTStd-ExtraComp';
+            font-size: 5vw;
+            height: 7vw;
+            padding: rem-calc(0 5 0 5);
+            width: 100%;
+        }
     }
 }

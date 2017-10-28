@@ -12,15 +12,19 @@ lang="en">
         <header>
             <section class="menu">
                 <nav>
-                    <a href="#">EVER UPWARD</a>
-                    <a href="#">#NYXL</a>
-                    <a href="#">ROSTER</a>
-                    <a href="#">STAY UP TO DATE</a>
+                    <a href="#ever-upward">EVER UPWARD</a>
+                    <a href="#nyxl">#NYXL</a>
+                    <a href="#roster">ROSTER</a>
+                    <a href="#stay-up-to-date">STAY UP TO DATE</a>
                 </nav>
             </section>
         </header>
-        <section class="top-video"></section>
-        <section class="ever-upward">
+        <section class="top-video">
+            <div class="video-wrapper">
+                <iframe id="ytplayer" type="text/html" width="100%" height="100%" src="https://www.youtube.com/embed/MRAZ_mSLXrA?start=12&autoplay=0&rel=0&hd=1" frameborder="0"></iframe>
+            </div>
+        </section>
+        <section class="ever-upward" id="ever-upward">
             <div class="ever-upward__top-text">EVER UPWARD</div>
             <div class="ever-upward__main-text">
                 It doesn’t matter where you started.
@@ -31,7 +35,7 @@ lang="en">
             <div class="ever-upward__left-side"></div>
             <div class="ever-upward__right-side"></div>
         </section>
-        <section class="social">
+        <section class="social" id="nyxl">
             <div class="social__title">#NYXL</div>
             <div class="social__icons">
                 <div class="social_icon social__icons-twitch">
@@ -107,7 +111,7 @@ lang="en">
             </div>
             <div class="social__line-separator"></div>
         </section>
-        <section class="roster">
+        <section class="roster" id="roster">
             <div class="roster__title">ROSTER</div>
             <div class="roster__text">
                 <div class="roster__row">
@@ -152,23 +156,32 @@ lang="en">
                 </div>
             </div>
         </section>
-        <section class="email">
+        <section class="email" id="stay-up-to-date">
             <div class="email__title">STAY UP TO DATE</div>
             <div class="email__form">
-                <form action="#" method="post">
+                <!-- <form action="#" method="post"> -->
                     <div class="email__form-field">
                         <input type="email" value="" name="email" class="required email" placeholder="E-MAIL" id="email">
                     </div>
                     <div class="email__form-submit">
                         <input type="submit" value="JOIN US" name="subscribe" id="submit" class="button">
                     </div>
-                </form>
+                <!-- </form> -->
             </div>
         </section>
         <main>
         </main>
         <footer>
-            <div class="company"></div>
+            <div class="company__logo">
+               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 120 68.4" enable-background="new 0 0 120 68.4" xml:space="preserve">
+        <path fill="#0F57EA" d="M14.475,33.958L2.8,45.634v-23.35L14.475,33.958z M66.96,33.959L98.317,2.602H85.196L60.4,27.399
+            L35.603,2.602H22.481l31.357,31.357L22.481,65.316h13.122L60.4,40.521l24.796,24.795h13.121L66.96,33.959z M118,58.755v6.561h-6.561
+            L80.081,33.959l31.358-31.357H118v6.56L93.202,33.959L118,58.755z M118,22.284v23.35l-11.675-11.675L118,22.284z M40.718,33.958
+            L9.36,65.316H2.8v-6.561l24.797-24.797L2.8,9.162v-6.56h6.56L40.718,33.958z M60.399,53.642l11.676,11.675H48.724L60.399,53.642z
+             M60.399,14.276L48.725,2.602h23.35L60.399,14.276z"/>
+        </svg>
+            </div>
             <div class="company__text">EXCELSIOR</div>
         </footer>
     </div>
