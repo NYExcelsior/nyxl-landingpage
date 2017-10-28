@@ -1,0 +1,21 @@
+%section-title {
+    color: $colorRed;
+    // font-size: rem-calc(50);
+    font-size: 7vw;
+    // padding-top: rem-calc(220);
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    text-align: center;
+}
+
+%social-icon {
+    display: inline-block;
+    svg {
+        height: 7vw;
+        width: 7vw;
+    }
+}
+
+body {
+    font-family: 'HelveticaLTStd-ExtraComp';
+}

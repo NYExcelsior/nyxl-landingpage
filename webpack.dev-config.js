@@ -43,7 +43,7 @@ module.exports = {
             test: /\.gif($|\?)|\.png($|\?)|.jpe?g($|\?)/,
             loader: 'url-loader'
         }, {
-            test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+            test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.otf($|\?)|\.eot($|\?)|\.svg($|\?)/,
             // loader: 'url-loader?limit=50&publicPath=../&name=fonts2/[name]-[hash].[ext]&outputPath=www/fonts/'
             loader: 'url-loader?limit=50&publicPath=../&name=fonts/[name].[ext]&outputPath=src/fonts'
         }

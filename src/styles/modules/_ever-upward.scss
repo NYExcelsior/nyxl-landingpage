@@ -1,0 +1,49 @@
+.ever-upward {
+    // height: 75vw;
+    color: $colorWhite;
+    position: relative;
+    &__top-text {
+        color: $colorWhite;
+        font-size: rem-calc(50);
+        padding-top: rem-calc(150);
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+    &__main-text {
+        font-size: rem-calc(130);
+        margin: auto;
+        padding: rem-calc(100 0 100 0);
+        position: relative;
+        width: 80%;
+        z-index: 1;
+    }
+    &__left-side {
+        background: repeating-linear-gradient(
+            -45deg,
+            $colorLightBlue,
+            $colorLightBlue rem-calc(30),
+            $colorDarkBlue rem-calc(30),
+            $colorDarkBlue rem-calc(60)
+        );
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: percentage(6/12);
+    }
+    &__right-side {
+        background: repeating-linear-gradient(
+            45deg,
+            $colorLightBlue,
+            $colorLightBlue rem-calc(30),
+            $colorDarkBlue rem-calc(30),
+            $colorDarkBlue rem-calc(60)
+        );
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: percentage(6/12);
+    }
+}

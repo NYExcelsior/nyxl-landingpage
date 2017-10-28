@@ -1,0 +1,20 @@
+.social  {
+    background-color: $colorDarkBlue;
+    &__title {
+        @extend %section-title; 
+    }
+    &__icons {
+        padding: rem-calc(200 0 200 0);
+        text-align: center;
+        .social_icon {
+            @extend %social-icon;
+            width: span(5 of 25);
+        }
+    }
+    &__line-separator {
+        border-bottom: 1px solid $colorWhite;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}

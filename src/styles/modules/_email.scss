@@ -1,0 +1,47 @@
+@mixin placeholder() {
+    color: $colorDarkBlue;
+    font-size: 8vw;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.email {
+    background: repeating-linear-gradient(
+        -45deg,
+        $colorLightBlue,
+        $colorLightBlue rem-calc(80),
+        $colorDarkBlue rem-calc(80),
+        $colorDarkBlue rem-calc(160)
+    );
+    &__title {
+        @extend %section-title; 
+    }
+    &__form-field {
+        input {
+            background: $colorWhite;
+            border: none;
+            color: $colorDarkBlue;
+            font-size: 8vw;
+            padding: rem-calc(18 18 15);
+            width: 100%;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                @include placeholder();
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                @include placeholder();
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                @include placeholder();            
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                @include placeholder();            
+            }
+            &::placeholder {
+                @include placeholder();                            
+            }
+        }
+    }
+    &__form-button {
+
+    }
+}

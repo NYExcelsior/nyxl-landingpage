@@ -1,0 +1,25 @@
+.menu {
+    background-color: $colorGray;
+    height: 10vw;
+    max-height: rem-calc(160);
+    nav {
+        height: 100%;
+        text-align: center;
+        > a {
+            color: $colorDarkBlue;
+            display: inline-block;
+            font-size: 5vw;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            vertical-align: top;
+            width: span(3);
+            -webkit-transition: all .3s ease;
+            &:hover {
+                color: $colorLightBlue;        
+            }
+        }
+    }
+}

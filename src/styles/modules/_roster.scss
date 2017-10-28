@@ -1,0 +1,24 @@
+.roster {
+    background-color: $colorDarkBlue;
+    font-size: 15vw;
+    padding-bottom: 15vw;
+    &__title {
+        @extend %section-title; 
+    }
+    &__row {
+        padding-left: 10%;
+    }
+    &__num {
+        color: $colorDarkBlue;
+        display: inline-block;
+        text-shadow: -2px -2px 0 $colorWhite, 2px -2px 0 $colorWhite, -2px 2px 0 $colorWhite, 2px 2px 0 $colorWhite;
+    }
+    &__name {
+        color: $colorWhite;
+        display: inline-block;
+    }
+    &__role {
+        color: $colorLightBlue;
+        display: inline-block;
+    }
+}

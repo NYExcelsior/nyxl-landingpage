@@ -1,0 +1,14 @@
+$colorDarkBlue: #171c38;
+$colorGray: #dedede;
+$colorGray2: #e5e5e5;
+$colorLightBlue: #0f57e9;
+$colorRed: #ff0000;
+$colorWhite: #ffffff;
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 0.25,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
