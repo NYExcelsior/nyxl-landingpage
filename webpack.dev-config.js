@@ -45,7 +45,7 @@ module.exports = {
         }, {
             test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.otf($|\?)|\.eot($|\?)|\.svg($|\?)/,
             // loader: 'url-loader?limit=50&publicPath=../&name=fonts2/[name]-[hash].[ext]&outputPath=www/fonts/'
-            loader: 'url-loader?limit=50&publicPath=../&name=fonts/[name].[ext]&outputPath=src/fonts'
+            loader: 'url-loader?limit=50&name=fonts/[name].[ext]'
         }
         ]
     },

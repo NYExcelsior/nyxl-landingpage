@@ -8,11 +8,10 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var path = require('path');
 module.exports = {
     entry: {
-        'main': './src/js/index.js',
-        'styles': './src/styles/styles.scss'
+        'main': './src/js/index.js'
     },
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname, 'build'),
         filename: '[name]-[hash].js'
     },
     module: {
@@ -30,12 +29,12 @@ module.exports = {
                     loader: 'css-loader',
                     options: {
                         minimize: true,
-                        sourceMap: true
+                        sourceMap: false
                     }
                 }, {
                     loader: 'sass-loader',
                     options: {
-                        sourceMap: true
+                        sourceMap: false
                     }
                 }]
             })
@@ -46,7 +45,7 @@ module.exports = {
         }, {
             test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.otf($|\?)|\.eot($|\?)|\.svg($|\?)/,
             // loader: 'url-loader?limit=50&publicPath=../&name=fonts2/[name]-[hash].[ext]&outputPath=www/fonts/'
-            loader: 'url-loader?limit=50&publicPath=../&name=fonts/[name].[ext]&outputPath=www/wp-content/themes/passersby/'
+            loader: 'url-loader?limit=50&name=fonts/[name].[ext]'
         }
         ]
     },
@@ -68,7 +67,13 @@ module.exports = {
         }),
         new UglifyJSPlugin({
             // // include: /\.min\.js$/,
-            minimize: true
+            // minimize: true
+            uglifyOptions: {
+                compress: {
+                    warnings: false
+                },
+                screw_ie8: true
+            }
         })
     ]
 };

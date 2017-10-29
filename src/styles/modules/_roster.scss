@@ -1,12 +1,12 @@
 .roster {
     background-color: $colorDarkBlue;
-    font-size: 12vw;
+    font-size: 10vw;
     padding-bottom: 15vw;
     &__title {
         @extend %section-title; 
     }
     &__row {
-        padding-left: 10%;
+        padding-left: 15%;
     }
     &__num {
         color: $colorDarkBlue;
