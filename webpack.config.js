@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -64,6 +64,13 @@ module.exports = {
             template: path.join(__dirname, './src/index.html'),
             filename: 'index.html',
             inject: 'body'
+        }),
+        new CopyWebpackPlugin([{
+            from: 'src/images',
+            to: 'images',
+            force: true
+        }], {
+            copyUnmodified: true
         }),
         new UglifyJSPlugin({
             // // include: /\.min\.js$/,

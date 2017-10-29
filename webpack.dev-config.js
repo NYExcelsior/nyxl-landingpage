@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var path = require('path');
@@ -40,8 +40,8 @@ module.exports = {
             })
         }, {
             // test: /\.gif($|\?)|\.png($|\?)|.jpe?g($|\?)|\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
-            test: /\.gif($|\?)|\.png($|\?)|.jpe?g($|\?)/,
-            loader: 'url-loader'
+            test: /\.gif($|\?)|\.png($|\?)|\.jpe?g($|\?)|\.svg($|\?)/,
+            loader: 'url-loader?name=images/[name].[ext]'
         }, {
             test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.otf($|\?)|\.eot($|\?)|\.svg($|\?)/,
             // loader: 'url-loader?limit=50&publicPath=../&name=fonts2/[name]-[hash].[ext]&outputPath=www/fonts/'
@@ -70,6 +70,13 @@ module.exports = {
             template: path.join(__dirname, './src/index.html'),
             filename: 'index.html',
             inject: 'body'
+        }),
+        new CopyWebpackPlugin([{
+            from: 'src/images',
+            to: 'images',
+            force: true
+        }], {
+            copyUnmodified: true
         })
     ],
     devtool: 'eval'

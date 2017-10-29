@@ -7,6 +7,14 @@
     }
     &__row {
         padding-left: 15%;
+        &:hover {
+            // cursor: pointer;
+            .social-icons {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
     }
     &__num {
         color: $colorDarkBlue;
@@ -20,5 +28,23 @@
     &__role {
         color: $colorLightBlue;
         display: inline-block;
+    }
+    .social-icons {
+        display: inline-block;
+        // text-align: center;
+        .social-icon {
+            @extend %social-icon--small;
+            // padding-left: rem-calc(15);
+            width: span(5 of 40);
+        }
+        a {
+            position: relative;
+            z-index: 1;
+            img {
+                opacity: 0;
+                transition: opacity .3s;
+                vertical-align: middle;
+            }
+        }
     }
 }
