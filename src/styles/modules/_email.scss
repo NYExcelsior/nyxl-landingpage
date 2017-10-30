@@ -30,7 +30,7 @@
             font-family: 'HelveticaLTStd-ExtraComp';
             font-size: 5vw;
             height: 7vw;
-            padding: rem-calc(0 5 0 0);
+            padding: rem-calc(0 5 0 5);
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 @include placeholder();
@@ -53,6 +53,7 @@
         display: inline-block;
         width: percentage(5/25);
         input {
+            -webkit-appearance: none;
             background-color: $colorDarkBlue;
             border: none;
             color: $colorWhite;
