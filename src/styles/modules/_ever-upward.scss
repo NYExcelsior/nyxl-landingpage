@@ -13,10 +13,13 @@
     }
     &__main-text {
         // font-size: rem-calc(130);
-        font-size: 8vw;
+        font-size: 7vw;
+        letter-spacing: .05vw;
+        line-height: 6.5vw;
         margin: auto;
-        padding: rem-calc(100 0 100 0);
+        padding: rem-calc(100vw 0);
         position: relative;
+        text-transform: uppercase;
         width: 80%;
         z-index: 1;
     }
