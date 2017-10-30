@@ -1,7 +1,6 @@
 @mixin placeholder() {
     color: $colorDarkBlue;
     font-family: 'HelveticaLTStd-ExtraComp';
-    font-size: 5vw;
     opacity: 1;
 }
 
@@ -28,9 +27,8 @@
             border: none;
             color: $colorDarkBlue;
             font-family: 'HelveticaLTStd-ExtraComp';
-            font-size: 5vw;
-            height: 7vw;
-            padding: rem-calc(0 5 0 5);
+            font-size: rem-calc(50);
+            padding: rem-calc(10 0 10 5);
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 @include placeholder();
@@ -58,9 +56,8 @@
             border: none;
             color: $colorWhite;
             font-family: 'HelveticaLTStd-ExtraComp';
-            font-size: 5vw;
-            height: 7vw;
-            padding: rem-calc(0 5 0 5);
+            font-size: rem-calc(50);
+            padding: rem-calc(10 0 10 5);
             width: 100%;
         }
     }

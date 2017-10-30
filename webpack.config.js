@@ -72,6 +72,27 @@ module.exports = {
         }], {
             copyUnmodified: true
         }),
+        new CopyWebpackPlugin([{
+            from: 'src/404.html',
+            to: '',
+            force: true
+        }], {
+            copyUnmodified: true
+        }),
+        new CopyWebpackPlugin([{
+            from: 'src/terms.html',
+            to: '',
+            force: true
+        }], {
+            copyUnmodified: true
+        }),
+        new CopyWebpackPlugin([{
+            from: 'src/privacy.html',
+            to: '',
+            force: true
+        }], {
+            copyUnmodified: true
+        }),
         new UglifyJSPlugin({
             // // include: /\.min\.js$/,
             // minimize: true
