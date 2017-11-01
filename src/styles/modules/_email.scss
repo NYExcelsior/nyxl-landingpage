@@ -1,6 +1,5 @@
 @mixin placeholder() {
     color: $colorDarkBlue;
-    font-family: 'HelveticaLTStd-ExtraComp';
     opacity: 1;
 }
 
@@ -26,9 +25,9 @@
             background: $colorWhite;
             border: none;
             color: $colorDarkBlue;
-            font-family: 'HelveticaLTStd-ExtraComp';
+            font-family: $mainFontFamily;
             font-size: rem-calc(50);
-            padding: rem-calc(10 0 10 5);
+            padding: rem-calc(10 0 0 5);
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 @include placeholder();
@@ -45,6 +44,9 @@
             &::placeholder {
                 @include placeholder();                            
             }
+            @media($breakpointLarge) {
+                padding-bottom: rem-calc(10);
+            }
         }
     }
     &__form-submit {
@@ -55,10 +57,13 @@
             background-color: $colorDarkBlue;
             border: none;
             color: $colorWhite;
-            font-family: 'HelveticaLTStd-ExtraComp';
+            font-family: $mainFontFamily;
             font-size: rem-calc(50);
-            padding: rem-calc(10 0 10 5);
+            padding: rem-calc(10 0 0 5);
             width: 100%;
+            @media($breakpointLarge) {
+                padding-bottom: rem-calc(10);
+            }
         }
     }
     #mc_embed_signup{

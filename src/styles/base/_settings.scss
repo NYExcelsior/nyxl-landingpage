@@ -1,9 +1,15 @@
-$colorDarkBlue: #171c38;
-$colorGray: #dedede;
-$colorGray2: #e5e5e5;
-$colorLightBlue: #0f57e9;
-$colorRed: #ff0000;
-$colorWhite: #ffffff;
+// Viewports
+$viewportSmall: 480px;
+$viewportMedium: 768px;
+$viewportLarge: 1120px;
+
+// Breakpoints
+$breakpointSmall: "min-width: " + $viewportSmall;
+$breakpointSmallMax: "max-width: " + ($viewportSmall - 1);
+$breakpointMedium: "min-width: " + $viewportMedium;
+$breakpointMediumMax: "max-width: " + ($viewportMedium - 1);
+$breakpointLarge: "min-width: " + $viewportLarge;
+$breakpointLargeMax: "max-width: " + ($viewportLarge - 1);
 
 $susy: (
   'columns': susy-repeat(12),
@@ -12,3 +18,10 @@ $susy: (
   'container-spread': 'narrow'
 );
 
+$colorDarkBlue: #171c38;
+$colorGray: #dedede;
+$colorGray2: #e5e5e5;
+$colorLightBlue: #0f57e9;
+$colorRed: #ff0000;
+$colorWhite: #ffffff;
+$mainFontFamily: 'HelveticaLTStd-ExtraComp';

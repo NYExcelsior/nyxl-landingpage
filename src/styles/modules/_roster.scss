@@ -8,23 +8,24 @@
     &__row {
         padding-left: 15%;
         position: relative;
-        &:hover {
-            // // cursor: pointer;
-            // .roster__overlay::after {
-            //     opacity: 1;
-            // }
-            .roster__overlay {
-                opacity: 0.1;
-            }
-            .social-icons {
-                opacity: 1;
-            }
-        }
+        // &:hover {
+        //     // // cursor: pointer;
+        //     // .roster__overlay::after {
+        //     //     opacity: 1;
+        //     // }
+        //     .roster__overlay {
+        //         opacity: 0.1;
+        //     }
+        //     .social-icons {
+        //         opacity: 1;
+        //     }
+        // }
     }
     &__overlay {
         display: inline-block;
         position: relative;
         transition: opacity .3s;
+        z-index: 1;
         // &::after {
         //     background: rgba(0, 0, 0, 0.9);
         //     content: '';
@@ -37,6 +38,12 @@
         //     transition: opacity .3s;
         //     width: 100%;
         // }
+        &:hover {
+            opacity: 0.1;
+            & + .social-icons {
+                opacity: 1;
+            }
+        }
     }
     &__num {
         color: $colorDarkBlue;
@@ -65,7 +72,6 @@
         }
         a {
             position: relative;
-            z-index: 1;
             img {
                 transform: translateY(-25%);
                 vertical-align: middle;
