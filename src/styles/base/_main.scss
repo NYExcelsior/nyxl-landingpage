@@ -1,11 +1,15 @@
 %section-title {
     color: $colorRed;
-    // font-size: rem-calc(50);
-    font-size: 5vw;
-    // padding-top: rem-calc(220);
-    padding-top: 10vw;
-    padding-bottom: 10vw;
+    font-size: rem-calc(50);
+    padding: rem-calc(200 0 200 0);
     text-align: center;
+    @media($breakpointMedium2Max) {
+        padding: rem-calc(100 0 100 0);
+    }
+    @media($breakpointSmallMax) {
+        font-size: rem-calc(30);
+        padding: rem-calc(50 0 50 0);
+    }
 }
 
 %social-icon {
@@ -13,6 +17,10 @@
     svg, img {
         height: 5vw;
         width: 5vw;
+        @media($breakpointSmallMax) {
+            height: 7vw;
+            width: 7vw;
+        }
     }
 }
 
@@ -21,6 +29,10 @@
     svg, img {
         height: 5vw;
         width: 5vw;
+        @media($breakpointSmallMax) {
+            height: 7vw;
+            width: 7vw;
+        }
     }
 }
 

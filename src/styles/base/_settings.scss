@@ -1,13 +1,16 @@
 // Viewports
 $viewportSmall: 480px;
 $viewportMedium: 768px;
-$viewportLarge: 1120px;
+$viewportMedium2: 1024px;
+$viewportLarge: 1920px;
 
 // Breakpoints
 $breakpointSmall: "min-width: " + $viewportSmall;
 $breakpointSmallMax: "max-width: " + ($viewportSmall - 1);
 $breakpointMedium: "min-width: " + $viewportMedium;
 $breakpointMediumMax: "max-width: " + ($viewportMedium - 1);
+$breakpointMedium2: "min-width: " + $viewportMedium2;
+$breakpointMedium2Max: "max-width: " + ($viewportMedium2 - 1);
 $breakpointLarge: "min-width: " + $viewportLarge;
 $breakpointLargeMax: "max-width: " + ($viewportLarge - 1);
 

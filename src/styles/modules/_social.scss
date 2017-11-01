@@ -4,12 +4,14 @@
         @extend %section-title; 
     }
     &__icons {
-        // padding: rem-calc(200 0 200 0);
-        padding: 0 0 15vw 0;
+        padding: rem-calc(0 0 50 0);
         text-align: center;
         .social-icon {
             @extend %social-icon;
-            width: span(5 of 25);
+            width: span(3 of 15);
+        }
+        @media($breakpointLarge) {
+            padding: rem-calc(0 0 150 0);
         }
     }
     &__line-separator {

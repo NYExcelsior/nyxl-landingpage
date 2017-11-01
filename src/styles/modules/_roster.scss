@@ -1,13 +1,24 @@
 .roster {
     background-color: $colorDarkBlue;
-    font-size: 10vw;
-    padding-bottom: 15vw;
+    font-size: rem-calc(120);
+    padding-bottom: rem-calc(150);
+    @media($breakpointLarge) {
+        font-size: rem-calc(150);
+    }
+    @media($breakpointMedium2Max) {
+        font-size: rem-calc(80);
+    }
+    @media($breakpointSmallMax) {
+        font-size: rem-calc(30);
+        padding-bottom: rem-calc(70);
+    }
     &__title {
         @extend %section-title; 
     }
     &__row {
         padding-left: 15%;
         position: relative;
+        user-select: none;
         // &:hover {
         //     // // cursor: pointer;
         //     // .roster__overlay::after {

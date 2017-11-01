@@ -11,7 +11,10 @@
         $colorDarkBlue rem-calc(80),
         $colorDarkBlue rem-calc(160)
     );
-    padding-bottom: 15vw;
+    padding-bottom: rem-calc(50);
+    @media($breakpointLarge) {
+        padding: rem-calc(0 0 150 0);
+    }
     &__title {
         @extend %section-title; 
     }
@@ -20,14 +23,14 @@
     }
     &__form-field {
         display: inline-block;
-        width: percentage(15/25);
+        width: percentage(15/30);
         input {
             background: $colorWhite;
             border: none;
             color: $colorDarkBlue;
             font-family: $mainFontFamily;
             font-size: rem-calc(50);
-            padding: rem-calc(10 0 0 5);
+            padding: rem-calc(10 0 10 5);
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 @include placeholder();
@@ -44,25 +47,34 @@
             &::placeholder {
                 @include placeholder();                            
             }
-            @media($breakpointLarge) {
-                padding-bottom: rem-calc(10);
+            @media($breakpointSmallMax) {
+                font-size: rem-calc(32);
+                padding: rem-calc(10 0 0 5);
             }
         }
     }
     &__form-submit {
         display: inline-block;
-        width: percentage(5/25);
+        width: percentage(5/30);
+        @media($breakpointMedium2Max) {
+            width: percentage(7/30);
+        }
+        @media($breakpointSmallMax) {
+            width: percentage(10/30);
+        }
         input {
             -webkit-appearance: none;
             background-color: $colorDarkBlue;
             border: none;
+            border-radius: 0;
             color: $colorWhite;
             font-family: $mainFontFamily;
             font-size: rem-calc(50);
-            padding: rem-calc(10 0 0 5);
+            padding: rem-calc(10 0 10 5);
             width: 100%;
-            @media($breakpointLarge) {
-                padding-bottom: rem-calc(10);
+            @media($breakpointSmallMax) {
+                font-size: rem-calc(32);
+                padding: rem-calc(10 0 0 5);
             }
         }
     }

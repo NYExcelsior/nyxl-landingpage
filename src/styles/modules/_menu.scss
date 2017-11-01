@@ -2,13 +2,26 @@
     background-color: $colorGray;
     height: 6vw;
     max-height: rem-calc(160);
+    position: relative;
+    .company-logo {
+        display: inline-block;
+        margin-top: rem-calc(3);
+        width: rem-calc(40);
+        height: rem-calc(25);
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        svg * {
+            fill: $colorWhite;
+        }
+    }
     nav {
         height: 100%;
         text-align: center;
         > a {
             color: $colorDarkBlue;
             display: inline-block;
-            font-size: 4vw;
+            font-size: rem-calc(50);
             position: relative;
             text-decoration: none;
             text-align: center;
@@ -19,6 +32,101 @@
             -webkit-transition: all .3s ease;
             &:hover {
                 color: $colorLightBlue;        
+            }
+            @media($breakpointMedium2Max) {
+                padding-top: rem-calc(5);
+                font-size: rem-calc(32);
+            }
+            @media($breakpointMediumMax) {
+                padding-top: rem-calc(5);
+                font-size: rem-calc(18);
+            }
+        }
+        @media($breakpointMedium2Max) {
+            display: none;
+        }
+    }
+    .popup-menu {
+        background-color: $colorDarkBlue;
+        display: none;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        transition: all .5s;
+        width: 100%;
+        z-index: 100;
+        a {
+            color: $colorWhite;
+            display: block;
+            font-size: rem-calc(50);
+            margin: auto;
+            padding-bottom: rem-calc(50);
+            top: rem-calc(100);
+        }
+    }
+    .menu-bars {
+        box-sizing: border-box;
+        color: $colorWhite;
+        cursor: pointer;
+        display: none;
+        height: rem-calc(24);
+        line-height: rem-calc(20);
+        position: absolute;
+        right: rem-calc(10);
+        top: 50%;
+        transition: color .3s ease;
+        transform: translateY(-50%);
+        width: rem-calc(20);
+        z-index: 101;
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: rem-calc(7);
+            left: 50%;
+            margin-top: rem-calc(-1.5);
+            margin-left: rem-calc(-10);
+            display: block;
+            height: rem-calc(3);
+            width: rem-calc(20);
+            border-radius: rem-calc(2);
+            transform-origin: center center;
+            background-color: currentColor;
+            transition: top .1s cubic-bezier(.215,.61,.355,1) .25s,transform .25s cubic-bezier(.215,.61,.355,1) 0s;
+        }
+
+        &::after {
+            top: rem-calc(19);
+        }
+
+        &.is-active {
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+            &::before, &::after {
+                top: 50%;
+                transition: top .1s cubic-bezier(.215,.61,.355,1) 0s,transform .25s cubic-bezier(.215,.61,.355,1) .1s;
+            }
+        }
+
+        @media($breakpointMedium2Max) {
+            display: inline-block;
+        }
+    }
+    @media($breakpointMedium2Max) {
+        background-color: $colorDarkBlue;
+        text-align: center;
+    }
+}
+
+body {
+    @media($breakpointMedium2Max) {
+        &.popup-menu-active {
+            overflow: hidden;
+            .menu .popup-menu {
+                display: block;
             }
         }
     }

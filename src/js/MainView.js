@@ -26,5 +26,13 @@ export default class MainView {
             //     }
             // });
         });
+        $('.menu-bars').on('click', function(){
+            $('body').toggleClass('popup-menu-active');
+            $(this).toggleClass('is-active');
+        });
+        $('.popup-menu a').on('click', function(){
+            $('body').toggleClass('popup-menu-active');
+            $('.menu .menu-bars').toggleClass('is-active');
+        });
     }
 }

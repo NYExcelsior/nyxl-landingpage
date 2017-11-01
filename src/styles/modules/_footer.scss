@@ -1,15 +1,18 @@
 footer {
     background-color: $colorGray;
     max-height: rem-calc(400);
-    padding: 10vw 0 8vw 0;
+    padding: rem-calc(130 0 100 0);
     position: relative;
-    .company__logo {
+    @media($breakpointSmallMax) {
+        padding: rem-calc(32 0 25 0);
+    }
+    .company-logo {
         text-align: center;
         svg {
             width: 9vw;
         }
     }
-    .company__text {
+    .company-text {
         color: $colorDarkBlue;
         font-size: 3vw;
         text-align: center;
@@ -23,6 +26,9 @@ footer {
             font-size: rem-calc(18);
             margin-right: rem-calc(10);
             text-decoration: none;
+            @media($breakpointSmallMax) {
+                font-size: rem-calc(12);
+            }
         }
     }
 }

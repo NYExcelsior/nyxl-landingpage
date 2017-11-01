@@ -1,27 +1,42 @@
 .ever-upward {
-    // height: 75vw;
     color: $colorWhite;
     position: relative;
     &__top-text {
         color: $colorWhite;
-        // font-size: rem-calc(50);
-        font-size: 6vw;
+        font-size: rem-calc(80);
         padding-top: rem-calc(150);
         position: relative;
         text-align: center;
         z-index: 1;
+        @media($breakpointMedium2Max) {
+            font-size: rem-calc(70);
+        }
+        @media($breakpointSmallMax) {
+            font-size: rem-calc(30);
+            line-height: rem-calc(45);
+            padding-top: rem-calc(80);
+        }
     }
     &__main-text {
-        // font-size: rem-calc(130);
-        font-size: 7vw;
-        letter-spacing: .05vw;
-        line-height: 6.5vw;
+        font-size: rem-calc(100);
+        letter-spacing: rem-calc(0.5);
+        line-height: rem-calc(90);
         margin: auto;
-        padding: rem-calc(100vw 0);
+        padding: rem-calc(100 0);
         position: relative;
         text-transform: uppercase;
         width: 80%;
         z-index: 1;
+        @media($breakpointMedium2Max) {
+            font-size: rem-calc(80);
+            line-height: rem-calc(75);
+            padding: rem-calc(50 0);
+        }
+        @media($breakpointSmallMax) {
+            font-size: rem-calc(40);
+            line-height: rem-calc(35);
+            padding: rem-calc(50 0);
+        }
     }
     &__left-side {
         background: repeating-linear-gradient(
