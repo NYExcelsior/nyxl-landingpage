@@ -27,6 +27,7 @@
         input {
             background: $colorWhite;
             border: none;
+            border-radius: 0;
             color: $colorDarkBlue;
             font-family: $mainFontFamily;
             font-size: rem-calc(50);
