@@ -32,29 +32,40 @@
         //     }
         // }
     }
+    &__content {
+        display: inline-block;
+        &:hover {
+            .roster__overlay {
+                opacity: 0.1;
+            }
+            .social-icons {
+                opacity: 1;
+            }
+        }
+    }
     &__overlay {
         display: inline-block;
         position: relative;
         transition: opacity .3s;
-        z-index: 1;
-        // &::after {
-        //     background: rgba(0, 0, 0, 0.9);
-        //     content: '';
-        //     height: 100%;
-        //     left: rem-calc(-10);
-        //     opacity: 0;
-        //     padding: rem-calc(0 10 0 10);
-        //     position: absolute;
-        //     top: 0;
-        //     transition: opacity .3s;
-        //     width: 100%;
+        // z-index: 1;
+        // // &::after {
+        // //     background: rgba(0, 0, 0, 0.9);
+        // //     content: '';
+        // //     height: 100%;
+        // //     left: rem-calc(-10);
+        // //     opacity: 0;
+        // //     padding: rem-calc(0 10 0 10);
+        // //     position: absolute;
+        // //     top: 0;
+        // //     transition: opacity .3s;
+        // //     width: 100%;
+        // // }
+        // &:hover {
+        //     opacity: 0.1;
+        //     & + .social-icons {
+        //         opacity: 1;
+        //     }
         // }
-        &:hover {
-            opacity: 0.1;
-            & + .social-icons {
-                opacity: 1;
-            }
-        }
     }
     &__num {
         color: $colorDarkBlue;
